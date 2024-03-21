@@ -1,0 +1,92 @@
+<h2 mat-dialog-title>{{ title }}</h2>
+<mat-dialog-content>
+  <form>
+    @if(title == 'Edit User') {
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+        Id
+      </label>
+      <input
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="id"
+        [formControl]="id"
+        type="text"
+        placeholder="id" />
+    </div>
+    }
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+        Username
+      </label>
+      <input
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="username"
+        [formControl]="username"
+        type="text"
+        placeholder="Username" />
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+        Email
+      </label>
+      <input
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="email"
+        [formControl]="email"
+        type="email"
+        placeholder="Email" />
+    </div>
+    <div class="mb-4">
+      <label
+        class="block text-gray-700 text-sm font-bold mb-2"
+        for="phone_number">
+        Phone Number
+      </label>
+      <input
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="phone_number"
+        [formControl]="phone_number"
+        type="number"
+        placeholder="Phone Number" />
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="hobby">
+        Hobby
+      </label>
+      <input
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="hobby"
+        [formControl]="hobby"
+        type="text"
+        placeholder="Hobby" />
+      <mat-hint>Add multiple skillsets separated by comma(,)</mat-hint>
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="skillsets">
+        Skillsets
+      </label>
+      <input
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="skillsets"
+        [formControl]="skillsets"
+        type="text"
+        placeholder="Skillsets" />
+      <mat-hint>Add multiple skillsets separated by comma(,)</mat-hint>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button
+    mat-button
+    (click)="close('cancel')"
+    class="bg-yellow-300 hover:bg-yellow-400 text-yellow-800 font-bold py-2 px-4 rounded items-center">
+    Cancel
+  </button>
+  <button
+    mat-button
+    (click)="close('confirm')"
+    cdkFocusInitial
+    class="bg-green-300 hover:bg-green-400 text-green-800 font-bold py-2 px-4 rounded items-center">
+    Confirm
+  </button>
+</mat-dialog-actions>

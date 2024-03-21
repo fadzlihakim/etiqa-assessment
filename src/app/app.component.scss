@@ -1,0 +1,26 @@
+// td:last-child {
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+//   gap: 5px;
+// }
+
+tbody:nth-child(odd) {
+  background-color: rgba($color: #d5d5d5, $alpha: 0.3);
+}
+
+tbody:nth-child(even) {
+  background-color: #ffffff;
+}
+
+th,
+td {
+  padding: 10px 20px;
+}
+
+div.head {
+  display: flex;
+  justify-content: space-between;
+  button {
+    right: 0px;
+  }
+}

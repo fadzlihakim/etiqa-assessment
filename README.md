@@ -2,6 +2,22 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
 
+## API Implementation
+
+This project was implemented with API using [NodeJS](https://nodejs.org/en).
+
+## Tailwind
+
+This project was styled using the [Tailwind CSS](https://tailwindcss.com/docs/installation) framework version 3.4.1.
+
+## Netlify
+
+This project was hosted in the cloud by [Netlify](https://etiqa-assessment.netlify.app/).
+
+## Github
+
+The source code is available on [Github](https://github.com/fadzlihakim/etiqa-assessment).
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
