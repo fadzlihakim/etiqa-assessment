@@ -1,55 +1,57 @@
-<mat-card class="m-20">
-  <mat-card-content>
-    <div class="container mx-auto">
-      <div class="head">
-        <h1 class="text-3xl font-bold">User Data</h1>
+<div class="bg-gray-200 h-dvh pt-20">
+  <mat-card class="m-20">
+    <mat-card-content>
+      <div class="container mx-auto">
+        <div class="head">
+          <h1 class="text-3xl font-bold">User Data</h1>
 
-        <button
-          type="button"
-          (click)="add()"
-          class="bg-green-300 hover:bg-green-400 text-green-800 font-bold py-2 px-4 rounded items-center">
-          Add User
-        </button>
+          <button
+            type="button"
+            (click)="add()"
+            class="bg-green-300 hover:bg-green-400 text-green-800 font-bold py-2 px-4 rounded items-center">
+            Add User
+          </button>
+        </div>
+        <table class="table-fixed">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Phone Number</th>
+              <th>Hobby</th>
+              <th>Skillsets</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          @for (item of userData; track item.id) {
+          <tbody>
+            <tr>
+              <td>{{ item.id }}</td>
+              <td>{{ item.username }}</td>
+              <td>{{ item.email }}</td>
+              <td>{{ item.phone_number }}</td>
+              <td>{{ item.hobby }}</td>
+              <td>{{ item.skillsets | stringArray }}</td>
+              <td class="grid grid-cols-2 gap-2">
+                <button
+                  type="button"
+                  (click)="edit(item)"
+                  class="bg-yellow-300 hover:bg-yellow-400 text-yellow-800 font-bold py-2 px-4 rounded items-center">
+                  Edit
+                </button>
+                <button
+                  type="button"
+                  (click)="delete(item.id)"
+                  class="bg-red-300 hover:bg-red-400 text-red-800 font-bold py-2 px-4 rounded items-center">
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+          }
+        </table>
       </div>
-      <table class="table-fixed">
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Username</th>
-            <th>Email</th>
-            <th>Phone Number</th>
-            <th>Hobby</th>
-            <th>Skillsets</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        @for (item of userData; track item.id) {
-        <tbody>
-          <tr>
-            <td>{{ item.id }}</td>
-            <td>{{ item.username }}</td>
-            <td>{{ item.email }}</td>
-            <td>{{ item.phone_number }}</td>
-            <td>{{ item.hobby }}</td>
-            <td>{{ item.skillsets | stringArray }}</td>
-            <td class="grid grid-cols-2 gap-2">
-              <button
-                type="button"
-                (click)="edit(item)"
-                class="bg-yellow-300 hover:bg-yellow-400 text-yellow-800 font-bold py-2 px-4 rounded items-center">
-                Edit
-              </button>
-              <button
-                type="button"
-                (click)="delete(item.id)"
-                class="bg-red-300 hover:bg-red-400 text-red-800 font-bold py-2 px-4 rounded items-center">
-                Delete
-              </button>
-            </td>
-          </tr>
-        </tbody>
-        }
-      </table>
-    </div>
-  </mat-card-content>
-</mat-card>
+    </mat-card-content>
+  </mat-card>
+</div>
