@@ -6,6 +6,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This project was implemented with API using [NodeJS](https://nodejs.org/en).
 
+## Google Cloud
+
+This project uses the Google Cloud Platform (GCP) for database management and hosting.
+
 ## Tailwind
 
 This project was styled using the [Tailwind CSS](https://tailwindcss.com/docs/installation) framework version 3.4.1.
