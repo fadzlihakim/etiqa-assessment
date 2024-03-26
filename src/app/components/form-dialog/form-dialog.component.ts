@@ -24,6 +24,8 @@ export class FormDialogComponent {
   skillsets = new FormControl('', Validators.required);
   id = new FormControl('');
 
+  errorMessage: string = '';
+
   constructor(
     private dialogRef: MatDialogRef<FormDialogComponent>,
     @Inject(MAT_DIALOG_DATA) data: any,
@@ -55,6 +57,16 @@ export class FormDialogComponent {
       skillsets: this.skillsets.value
     };
     this.dialogRef.close(JSON.stringify(userData));
+  }
+
+  updateErrorMessage() {
+    if (this.email.hasError('required')) {
+      this.errorMessage = 'You must enter a value';
+    } else if (this.email.hasError('email')) {
+      this.errorMessage = 'Not a valid email';
+    } else {
+      this.errorMessage = '';
+    }
   }
 
 }

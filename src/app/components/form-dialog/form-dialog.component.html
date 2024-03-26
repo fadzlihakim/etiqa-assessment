@@ -23,6 +23,7 @@
         id="username"
         [formControl]="username"
         type="text"
+        (blur)="updateErrorMessage()"
         placeholder="Username" />
     </div>
     <div class="mb-4">
@@ -35,6 +36,9 @@
         [formControl]="email"
         type="email"
         placeholder="Email" />
+      @if (email.invalid) {
+      <mat-error>{{ errorMessage }}</mat-error>
+      }
     </div>
     <div class="mb-4">
       <label
